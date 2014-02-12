@@ -1,0 +1,56 @@
+Transition Screen Panel Specification
+
+Tile Size
+w:750 x h:816
+
+Tile Registration Point
+Centre
+
+Screen Position (relative to stage/screen)
+y:635 from centre point including 33px for notification bar, x:400
+ 
+Gradient Type
+Radial gradient
+
+Gradient Colours
+Outer gradient: CCCCCC - Alpha: 25%, Inner gradient:FFFFFF - Alpha:2%  
+
+Stroke  
+Width: 1px
+
+Gradient Type
+Linear
+
+Stroke Gradient Colour
+Top gradient: FFFFFF - Alpha: 80%, Lower Gradient:CCCCCC - Alpha:35%
+Angle: 90 degrees
+
+
+Transition  Storyboard
+
+User touch’s screen
+
+Screen tile fades in behind content. Content and tile scale to 99% - Transition time 0.2 sec 
+
+If user slides finger gently left the adjacent screen slides in from right hand-side. Adjacent screen is scaled up to 101% and starts to overlap current screen.
+
+Screen 1 slides left from starting position: x:400 (centred to stage/screen) by 215px to x:185  Easing: easeInOut 100%, Time: 0.9 sec, Scale:0.9 (99%), alpha fade to 0.
+
+Screen 2 starting position: x:1200 (400px off screen, to the right), Starting scale: 1.1 
+(101% )
+
+Screen 2 slides in over Screen 1 as Screen 1 slides off  to the left.
+
+Continues to slide left a further 15px to 
+position (b) x:400 Easing: easeNone, Time: 0.2 sec
+
+Stops and scales down. Scale:1 (100%),
+Easing: easeInOut: 75%, Time: 0.2 sec, Screen Tile fades to alpha:0
+
+Swipe right plays the transition in reverse. Active screen scales up to 101% and slides over the right. Second screen appears from left hand-side and overlaps underneath.
+
+Second screen ease’s into centred position.
+
+Screen tile stops at centre position.
+
+Background tile disappears as screen tile scales back up from 99% to 100%.
